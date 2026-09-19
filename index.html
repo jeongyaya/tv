@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>왓챠 실행 테스트</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+a {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: 18px auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: white;
+    color: black;
+
+    text-decoration: none;
+    border-radius: 12px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:focus {
+    outline: 4px solid #00aaff;
+    transform: scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎬 왓챠 실행 테스트</h1>
+<p>TV Bro에서 두 방식을 각각 테스트하세요.</p>
+
+<!-- 테스트 1 : Watcha URI 방식 -->
+<a href="intent://open/#Intent;scheme=watcha;package=com.frograms.wplay;end">
+    ① 왓챠 실행<br>
+    <small>URI 방식</small>
+</a>
+
+<!-- 테스트 2 : 패키지 방식 -->
+<a href="intent:#Intent;package=com.frograms.wplay;end">
+    ② 왓챠 실행<br>
+    <small>패키지 방식</small>
+</a>
+
+</body>
+</html>
