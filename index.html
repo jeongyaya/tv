@@ -3,18 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Android TV 설정</title>
+
+<title>Genie TV 설정</title>
 
 <style>
 body {
-    font-family: sans-serif;
+    margin: 0;
+    padding: 25px 15px 50px;
     background: #111;
     color: white;
+    font-family: sans-serif;
     text-align: center;
-    padding: 25px 15px;
 }
 
 h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #aaa;
     margin-bottom: 25px;
 }
 
@@ -23,17 +31,21 @@ a {
     width: 90%;
     max-width: 520px;
     margin: 12px auto;
-    padding: 17px;
-    border-radius: 12px;
+    padding: 18px;
+    box-sizing: border-box;
+
     background: white;
     color: black;
+
     text-decoration: none;
+    border-radius: 12px;
+
     font-size: 19px;
-    box-sizing: border-box;
+    font-weight: bold;
 }
 
 a:focus {
-    outline: 4px solid #4da6ff;
+    outline: 4px solid #00aaff;
     transform: scale(1.03);
 }
 </style>
@@ -41,111 +53,138 @@ a:focus {
 
 <body>
 
-<h1>📺 Android TV 설정</h1>
+<h1>📺 Genie TV 설정</h1>
+<p>TV Bro에서 원하는 설정을 선택하세요.</p>
 
-<a href="intent://settings/#Intent;action=android.settings.SETTINGS;end">
+
+<!-- 전체 설정 -->
+
+<a href="intent://settings/#Intent;action=android.settings.SETTINGS;package=com.android.tv.settings;end">
 ⚙️ 전체 설정
 </a>
 
-<a href="intent://applications/#Intent;action=android.settings.MANAGE_APPLICATIONS_SETTINGS;end">
-📱 앱 목록
+
+<!-- 앱 -->
+
+<a href="intent://applications/#Intent;action=android.settings.MANAGE_APPLICATIONS_SETTINGS;package=com.android.tv.settings;end">
+📱 설치된 앱 목록
 </a>
 
-<a href="intent://applications/#Intent;action=android.settings.APPLICATION_SETTINGS;end">
+
+<a href="intent://applications/#Intent;action=android.settings.APPLICATION_SETTINGS;package=com.android.tv.settings;end">
 📱 앱 설정
 </a>
 
-<a href="intent://app-details/#Intent;action=android.settings.APPLICATION_DETAILS_SETTINGS;end">
-📱 특정 앱 정보
+
+<!-- 저장공간 -->
+
+<a href="intent://storage/#Intent;action=android.settings.INTERNAL_STORAGE_SETTINGS;package=com.android.tv.settings;end">
+💾 저장공간
 </a>
 
-<a href="intent://storage/#Intent;action=android.settings.INTERNAL_STORAGE_SETTINGS;end">
-💾 내부 저장공간
-</a>
 
-<a href="intent://wifi/#Intent;action=android.settings.WIFI_SETTINGS;end">
+<!-- 네트워크 -->
+
+<a href="intent://wifi/#Intent;action=android.settings.WIFI_SETTINGS;package=com.android.tv.settings;end">
 📶 Wi-Fi
 </a>
 
-<a href="intent://bluetooth/#Intent;action=android.settings.BLUETOOTH_SETTINGS;end">
+
+<a href="intent://network/#Intent;action=android.settings.WIRELESS_SETTINGS;package=com.android.tv.settings;end">
+🌐 네트워크 설정
+</a>
+
+
+<!-- 블루투스 -->
+
+<a href="intent://bluetooth/#Intent;action=android.settings.BLUETOOTH_SETTINGS;package=com.android.tv.settings;end">
 🔵 블루투스
 </a>
 
-<a href="intent://network/#Intent;action=android.settings.WIRELESS_SETTINGS;end">
-🌐 네트워크 및 인터넷
-</a>
 
-<a href="intent://display/#Intent;action=android.settings.DISPLAY_SETTINGS;end">
+<!-- 디스플레이 -->
+
+<a href="intent://display/#Intent;action=android.settings.DISPLAY_SETTINGS;package=com.android.tv.settings;end">
 🖥️ 디스플레이
 </a>
 
-<a href="intent://sound/#Intent;action=android.settings.SOUND_SETTINGS;end">
+
+<!-- 소리 -->
+
+<a href="intent://sound/#Intent;action=android.settings.SOUND_SETTINGS;package=com.android.tv.settings;end">
 🔊 소리
 </a>
 
-<a href="intent://accessibility/#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end">
+
+<!-- 접근성 -->
+
+<a href="intent://accessibility/#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;package=com.android.tv.settings;end">
 ♿ 접근성
 </a>
 
-<a href="intent://security/#Intent;action=android.settings.SECURITY_SETTINGS;end">
-🔐 보안
-</a>
 
-<a href="intent://privacy/#Intent;action=android.settings.PRIVACY_SETTINGS;end">
+<!-- 개인정보 -->
+
+<a href="intent://privacy/#Intent;action=android.settings.PRIVACY_SETTINGS;package=com.android.tv.settings;end">
 🔒 개인정보 보호
 </a>
 
-<a href="intent://location/#Intent;action=android.settings.LOCATION_SOURCE_SETTINGS;end">
+
+<!-- 위치 -->
+
+<a href="intent://location/#Intent;action=android.settings.LOCATION_SOURCE_SETTINGS;package=com.android.tv.settings;end">
 📍 위치
 </a>
 
-<a href="intent://date/#Intent;action=android.settings.DATE_SETTINGS;end">
+
+<!-- 날짜 / 시간 -->
+
+<a href="intent://date/#Intent;action=android.settings.DATE_SETTINGS;package=com.android.tv.settings;end">
 🕐 날짜 및 시간
 </a>
 
-<a href="intent://language/#Intent;action=android.settings.LOCALE_SETTINGS;end">
+
+<!-- 언어 -->
+
+<a href="intent://language/#Intent;action=android.settings.LOCALE_SETTINGS;package=com.android.tv.settings;end">
 🌐 언어
 </a>
 
-<a href="intent://keyboard/#Intent;action=android.settings.INPUT_METHOD_SETTINGS;end">
+
+<!-- 키보드 -->
+
+<a href="intent://keyboard/#Intent;action=android.settings.INPUT_METHOD_SETTINGS;package=com.android.tv.settings;end">
 ⌨️ 키보드
 </a>
 
-<a href="intent://accounts/#Intent;action=android.settings.SYNC_SETTINGS;end">
-👤 계정 및 동기화
-</a>
 
-<a href="intent://developer/#Intent;action=android.settings.APPLICATION_DEVELOPMENT_SETTINGS;end">
-🛠️ 개발자 옵션
-</a>
+<!-- 알림 -->
 
-<a href="intent://vpn/#Intent;action=android.settings.VPN_SETTINGS;end">
-🔐 VPN
-</a>
-
-<a href="intent://nfc/#Intent;action=android.settings.NFC_SETTINGS;end">
-📡 NFC
-</a>
-
-<a href="intent://battery/#Intent;action=android.settings.BATTERY_SAVER_SETTINGS;end">
-🔋 배터리 절약
-</a>
-
-<a href="intent://notifications/#Intent;action=android.settings.NOTIFICATION_SETTINGS;end">
+<a href="intent://notifications/#Intent;action=android.settings.NOTIFICATION_SETTINGS;package=com.android.tv.settings;end">
 🔔 알림
 </a>
 
-<a href="intent://sound/#Intent;action=android.settings.NOTIFICATION_LISTENER_SETTINGS;end">
-🔔 알림 접근
+
+<!-- VPN -->
+
+<a href="intent://vpn/#Intent;action=android.settings.VPN_SETTINGS;package=com.android.tv.settings;end">
+🔐 VPN
 </a>
 
-<a href="intent://usage/#Intent;action=android.settings.USAGE_ACCESS_SETTINGS;end">
-📊 사용량 액세스
+
+<!-- 개발자 옵션 -->
+
+<a href="intent://developer/#Intent;action=android.settings.APPLICATION_DEVELOPMENT_SETTINGS;package=com.android.tv.settings;end">
+🛠️ 개발자 옵션
 </a>
 
-<a href="intent://unknown-sources/#Intent;action=android.settings.MANAGE_UNKNOWN_APP_SOURCES;end">
-📦 알 수 없는 앱 설치
+
+<!-- 배터리 -->
+
+<a href="intent://battery/#Intent;action=android.settings.BATTERY_SAVER_SETTINGS;package=com.android.tv.settings;end">
+🔋 배터리 절약
 </a>
+
 
 </body>
 </html>
