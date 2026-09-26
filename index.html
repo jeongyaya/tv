@@ -142,36 +142,38 @@ TV Bro · Genie TV STB A
     <small>Android TV 설정 메인 화면</small>
 </a>
 
-
-
 <a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end">
-    ① Android Accessibility Settings
-    <small>표준 ACCESSIBILITY_SETTINGS</small>
+① Standard Accessibility
+<small>android.settings.ACCESSIBILITY_SETTINGS</small>
 </a>
-
 
 <a href="intent://#Intent;component=com.android.tv.settings/.system.AccessibilityActivity;end">
-    ② AOSP AccessibilityActivity
-    <small>com.android.tv.settings/.system.AccessibilityActivity</small>
+② TV AccessibilityActivity
+<small>com.android.tv.settings/.system.AccessibilityActivity</small>
 </a>
 
-
-<a href="intent://#Intent;component=com.android.tv.settings/.AccessibilityOemSettings;end">
-    ③ AccessibilityOemSettings
-    <small>루트 경로 테스트</small>
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;package=com.android.tv.settings;end">
+③ Accessibility + TV Settings
+<small>action + package</small>
 </a>
 
-
-<a href="intent://#Intent;component=com.android.tv.settings/.system.AccessibilityOemSettings;end">
-    ④ system.AccessibilityOemSettings
-    <small>system 경로 테스트</small>
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;component=com.android.tv.settings/.system.AccessibilityActivity;end">
+④ Action + Component
+<small>action + AccessibilityActivity</small>
 </a>
 
-
-<a href="intent://#Intent;component=com.android.tv.settings/.accessibility.AccessibilityOemSettings;end">
-    ⑤ accessibility.AccessibilityOemSettings
-    <small>accessibility 경로 테스트</small>
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;package=com.google.android.tv.settings;end">
+⑤ Google TV Accessibility
+<small>Google TV Settings package</small>
 </a>
+
+<a href="intent://#Intent;component=com.google.android.tv.settings/.system.AccessibilityActivity;end">
+⑥ Google TV AccessibilityActivity
+<small>Google TV explicit component</small>
+</a>
+
+</body>
+</html>
 
 </body>
 </html>
