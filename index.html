@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Genie TV 설정</title>
+<title>Accessibility Test</title>
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -21,7 +17,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     margin: 10px 0 5px;
 }
 
@@ -31,29 +27,18 @@ h1 {
     margin-bottom: 30px;
 }
 
-h2 {
-    max-width: 600px;
-    margin: 30px auto 12px;
-    font-size: 20px;
-}
-
 a {
     display: block;
     width: 100%;
     max-width: 600px;
-    margin: 10px auto;
-
+    margin: 12px auto;
     padding: 20px;
-
     background: #222;
     color: white;
     text-decoration: none;
-
     border-radius: 14px;
-
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
-
     border: 1px solid #333;
 }
 
@@ -64,82 +49,52 @@ a:focus {
 
 small {
     display: block;
-    margin-top: 5px;
+    margin-top: 6px;
     color: #888;
-    font-weight: normal;
     font-size: 13px;
+    font-weight: normal;
 }
 </style>
 </head>
 
 <body>
 
-<h1>⚙️ Genie TV 설정</h1>
-
-<div class="subtitle">
-TV Bro · Genie TV STB A
-</div>
+<h1>♿ Accessibility</h1>
+<div class="subtitle">Direct Intent Test</div>
 
 
-<h2>📱 앱</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.device.apps.AppsActivity;end">
-    📱 앱 설정
-    <small>설치된 앱 관리</small>
-</a>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.device.apps.AllAppsActivity;end">
-    📱 전체 앱
-    <small>전체 애플리케이션</small>
-</a>
-
-<h2>♿ 접근성</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.system.AccessibilityActivity;end">
-    ♿ Accessibility OEM Settings
-    <small>OEM 접근성 설정 바로가기</small>
+<!-- ① 가장 유력 -->
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_TV_OEM_LINK;end">
+    ① Accessibility TV OEM Link
+    <small>OEM 전용 접근성 Intent</small>
 </a>
 
 
-<h2>🌐 네트워크</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.connectivity.NetworkActivity;end">
-    📶 네트워크 설정
-    <small>Wi-Fi / 네트워크</small>
+<!-- ② 실제 OEM Activity 직접 호출 -->
+<a href="intent://#Intent;component=com.android.tv.settings/.oemlink.AccessibilitySettingsActivity;end">
+    ② AccessibilitySettingsActivity
+    <small>com.android.tv.settings/.oemlink.AccessibilitySettingsActivity</small>
 </a>
 
 
-<h2>🔊 화면 · 소리</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.device.displaysound.DisplaySoundActivity;end">
-    🔊 소리 설정
-    <small>소리 및 음량</small>
+<!-- ③ 표준 접근성 Intent -->
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end">
+    ③ Standard Accessibility
+    <small>android.settings.ACCESSIBILITY_SETTINGS</small>
 </a>
 
 
-<h2>🛠️ 시스템</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.system.development.DevelopmentActivity;end">
-    🛠️ 개발자 옵션
-    <small>개발자 설정</small>
-</a>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.system.LanguageActivity;end">
-    🌐 언어 설정
-    <small>언어 및 입력</small>
-</a>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.about.AboutActivity;end">
-    ℹ️ 기기 정보
-    <small>Android TV 기기 정보</small>
+<!-- ④ OEM action + package -->
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_TV_OEM_LINK;package=com.android.tv.settings;end">
+    ④ OEM Link + Package
+    <small>OEM Intent + com.android.tv.settings</small>
 </a>
 
 
-<h2>⚙️ 메인</h2>
-
-<a href="intent://#Intent;component=com.android.tv.settings/.MainSettings;end">
-    ⚙️ 전체 설정
-    <small>Android TV 설정 메인 화면</small>
+<!-- ⑤ 표준 action + TV Settings package -->
+<a href="intent://#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;package=com.android.tv.settings;end">
+    ⑤ Accessibility + Package
+    <small>ACCESSIBILITY_SETTINGS + com.android.tv.settings</small>
 </a>
 
 
