@@ -142,5 +142,37 @@ TV Bro · Genie TV STB A
     <small>Android TV 설정 메인 화면</small>
 </a>
 
+<h2>👤 계정 및 로그인</h2>
+
+<!-- ① 가장 유력 -->
+<a href="intent://#Intent;action=com.android.tv.settings.ACCOUNTS;end">
+    👤 계정 및 로그인 ①
+    <small>Android TV 전용 ACCOUNTS Intent</small>
+</a>
+
+<!-- ② action + package -->
+<a href="intent://#Intent;action=com.android.tv.settings.ACCOUNTS;package=com.android.tv.settings;end">
+    👤 계정 및 로그인 ②
+    <small>ACCOUNTS + com.android.tv.settings</small>
+</a>
+
+<!-- ③ 일반 Android 계정 설정 -->
+<a href="intent://#Intent;action=android.settings.MANAGE_ALL_ACCOUNTS_SETTINGS;end">
+    👤 계정 및 로그인 ③
+    <small>MANAGE_ALL_ACCOUNTS_SETTINGS</small>
+</a>
+
+<!-- ④ 계정 추가 설정 -->
+<a href="intent://#Intent;action=android.settings.ADD_ACCOUNT_SETTINGS;end">
+    👤 계정 및 로그인 ④
+    <small>ADD_ACCOUNT_SETTINGS</small>
+</a>
+
+<!-- ⑤ 계정 동기화 설정 -->
+<a href="intent://#Intent;action=android.settings.SYNC_SETTINGS;end">
+    👤 계정 및 로그인 ⑤
+    <small>SYNC_SETTINGS</small>
+</a>
+
 </body>
 </html>
